@@ -1,32 +1,17 @@
-from chatterbot import ChatBot
-from chatterbot.trainers import ListTrainer
+# -*- coding: utf-8 -*-
 
-BOT_NAME = "Ana"
-bot = ChatBot(BOT_NAME)
-bot = ChatBot(
-    BOT_NAME,
-    storage_adapter="chatterbot.storage.SQLStorageAdapter",
-    database_uri="sqlite:///database.sqlite3",
-)
+from typing import Optional
+from fastapi import FastAPI
 
-conversa = ListTrainer(bot)
-conversa.train(
-    [
-        "Oi?",
-        "Eae",
-        "Qual o seu nome?",
-        "Irineu, você não sabe e nem eu",
-        "Prazer em te conhecer",
-        "Igualmente meu patrão",
-    ]
-)
+import bot
 
-while True:
-    try:
-        resposta = bot.get_response(input("Usuário: "))
-        if float(resposta.confidence) > 0.5:
-            print("Irineu: ", resposta)
-        else:
-            print("Eu não entendi :(")
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        break
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"ChatBot": "Hello World"}
+
+
+@app.get("/msg/{text}")
+def read_msg(text: str, q: Optional[str] = None):
+    return bot.quest(text)

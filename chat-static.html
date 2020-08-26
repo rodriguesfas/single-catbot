@@ -43,7 +43,8 @@
 
                         <input type="text" data-conv-question="Olá, eu sou a Ana 😊 assistente virtual do Colégio Objetivo." data-no-answer="true">
                         <input type="text" data-conv-question="Estou aqui para te ajudar! Me conta o que você precisa? É só escolher uma das opções aqui 👇 mesmo:" data-no-answer="true">
-                        <select name="menu" data-callback="storeState" data-conv-question="" name="first-question">
+
+                        <select name="menuoptions" data-callback="storeState" data-conv-question="">
                             <option value="mensalidade">Mensalidade</option>
                             <option value="fardamento">Fardamento</option>
                             <option value="materialescolar">Material escolar</option>
@@ -60,7 +61,7 @@
                             <option value="fim">Fim</option>
                         </select>
 
-                        <div data-conv-fork="menu">
+                        <div data-conv-fork="menuoptions">
                             <div data-conv-case="mensalidade">
                                 <input type="text" data-conv-question="As informações sobre 💰 valores de mensalidade são passadas apenas através do telefone 📱." data-no-answer="true">
                                 <input type="text" data-conv-question="Entre em contato com a tesouraria do Colégio Objetivo." data-no-answer="true">
@@ -136,7 +137,7 @@
                                 <input type="text" data-conv-question="Eles possuem um refeitório próprio, com alimentação balanceada e cardápio que varia todos os dias, e participam do momento do descanso no dormitório." data-no-answer="true">
                                 <input type="text" data-conv-question="Também temos a modalidade de Turma Integrada para o 9º ano (Ensino Fundamental II), 1º e 2º ano (Ensino Médio)." data-no-answer="true">
                                 <input type="text" data-conv-question="Além de um material especializado, eles desfrutam de aulas extras, um horário de estudo personalizado e de um sistema de avaliação altamente rigoroso com simulados das principais instituições nacionais." data-no-answer="true">
-                                <select name="thought " data-conv-question="Para conhecer mais sobre o Full Time, acesse:">
+                                <select name="thought" data-conv-question="Para conhecer mais sobre o Full Time, acesse:">
                                     <option value="fulltime" data-callback="fulltime">Full Time</option>
                                     <option value="yes" data-callback="rollback">↩️ voltar</option>
                                     <option value="fim">Fim</option>
@@ -150,19 +151,19 @@
                                 <input type="text" data-conv-question="Ensino Fundamental II: 88 988263612/988263607" data-no-answer="true">
                                 <input type="text" data-conv-question="Ensino Médio 1ª e 2ª série: 88 988080102" data-no-answer="true">
                                 <input type="text" data-conv-question="Ensino Médio 3ª série: 88 988413306" data-no-answer="true">
-                                <select name="thought " data-conv-question="Para conhecer mais sobre o Full Time, acesse:">
+                                <select name="thought" data-conv-question="Para conhecer mais sobre o Full Time, acesse:">
                                     <option value="fulltime" data-callback="fulltime">Full Time</option>
                                     <option value="yes" data-callback="rollback">↩️ voltar</option>
                                     <option value="fim">Fim</option>
                                 </select>
                             </div>
                             <div data-conv-case="desafioobjetivo">
-                                <input type="text" data-conv-question="O Desafio Objetivo de Português e Matemática 🏆 é uma competição que acontece anualmente e garante bolsas de estudo e descontos especiais para estudantes novatos e veteranos. " data-no-answer="true">
+                                <input type="text" data-conv-question="O Desafio Objetivo de Português e Matemática 🏆 é uma competição que acontece anualmente e garante bolsas de estudo e descontos especiais para estudantes novatos e veteranos." data-no-answer="true">
                                 <input type="text" data-conv-question="Podem participar alunos do 5º ano (Ensino Fundamental I) ao 2º ano (Ensino Médio) para concorrer a premiação referente ao ano seguinte." data-no-answer="true">
                                 <input type="text" data-conv-question="Os inscritos realizam uma prova de conhecimentos sobre as duas disciplinas e a classificação se dá em ordem decrescente (maior nota para menor nota)." data-no-answer="true">
                                 <input type="text" data-conv-question="O concurso acontece normalmente em 📅 setembro." data-no-answer="true">
                                 <input type="text" data-conv-question="Em 2020, devido a pandemia, o Desafio foi prorrogado." data-no-answer="true">
-                                <select name="thought " data-conv-question="Fique atento às nossas redes sociais para não perder os prazos.">
+                                <select name="thought" data-conv-question="Fique atento às nossas redes sociais para não perder os prazos.">
                                     <option value="facebook" data-callback="facebook">Facebook</option>
                                     <option value="instagram" data-callback="instagram">Instagram</option>
                                     <option value="youtube" data-callback="youtube">Youtube</option>
@@ -171,18 +172,18 @@
                                 </select>
                             </div>
                             <div data-conv-case="matriculas">
-                                <input type="text" data-conv-question="A seleção de novos alunos para 📅 2021 já está aberta. " data-no-answer="true ">
-                                <select name="thought" data-conv-question="Você pode ✍️ preencher o formulário de interesse na vaga e agendar uma entrevista com uma de nossas assessoras: ">
+                                <input type="text" data-conv-question="A seleção de novos alunos para 📅 2021 já está aberta." data-no-answer="true">
+                                <select name="thought" data-conv-question="Você pode ✍️ preencher o formulário de interesse na vaga e agendar uma entrevista com uma de nossas assessoras:">
                                     <option value="matriculas" data-callback="matriculas">Matriculas</option>
                                     <option value="yes" data-callback="rollback">↩️ voltar</option>
                                     <option value="fim">Fim</option>
                                 </select>
                             </div>
                             <div data-conv-case="bilingue">
-                                <input type="text" data-conv-question="O Objetivo Juazeiro oferece o ensino bilíngue a partir do Infantil II até o 6º ano do Ensino Fundamental II. " data-no-answer="true ">
+                                <input type="text" data-conv-question="O Objetivo Juazeiro oferece o ensino bilíngue a partir do Infantil II até o 6º ano do Ensino Fundamental II." data-no-answer="true">
                                 <input type="text" data-conv-question="Para 2021, implementaremos no 7º ano. Nossa escola trabalha com o melhor programa de educação bilíngue do Brasil, a International School, que proporciona uma imersão total na língua
-                                inglesa por meio de materiais didáticos, paradidáticos e concretos desenvolvidos especialmente para garantir um aprendizado efetivo e diferenciado do idioma. " data-no-answer="true ">
-                                <select name="thought" data-conv-question="Conheça mais: ">
+                                inglesa por meio de materiais didáticos, paradidáticos e concretos desenvolvidos especialmente para garantir um aprendizado efetivo e diferenciado do idioma." data-no-answer="true">
+                                <select name="thought" data-conv-question="Conheça mais:">
                                     <option value="bilingue" data-callback="bilingue">Programa Bilíngue
                                     </option>
                                     <option value="yes" data-callback="rollback">↩️ voltar</option>
@@ -193,14 +194,14 @@
                                 <input type="text" name="name" data-conv-question="Entendi! Por favor, informe seu nome:">
                                 <input type="text" data-conv-question="Olá, {name}:0! Fico feliz em poder te ouvir!" data-no-answer="true">
                                 <input data-conv-question="Agora por favor, informe seu email:" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="Agora por favor, informe seu email:">
-                                <input type="text" name="name" data-conv-question="Escreva sua mensagem: ">
+                                <input type="text" name="name" data-conv-question="Escreva sua mensagem:">
                                 <select name="thought" data-conv-question="😆 Sucesso! Em breve uns dos nossos responsáveis entrará em contato com você se for necessário.">
                                     <option value="yes" data-callback="rollback">↩️ voltar</option>
                                     <option value="fim">Fim</option>
                                 </select>
                             </div>
                             <div data-conv-case="endereco">
-                                <select name="thought" data-conv-question="😆 O Colégio Objetivo Juazeiro tem sede na Avenida Dr. Floro Bartolomeu, 776 - São Miguel, Juazeiro do Norte – Ceará. ">
+                                <select name="thought" data-conv-question="😆 O Colégio Objetivo Juazeiro tem sede na Avenida Dr. Floro Bartolomeu, 776 - São Miguel, Juazeiro do Norte – Ceará.">
                                     <option value="googlemaps" data-callback="googlemaps">Google Maps</option>
                                     <option value="yes" data-callback="rollback">↩️ voltar</option>
                                     <option value="fim">Fim</option>
@@ -208,13 +209,13 @@
                             </div>
 
                             <div data-conv-case="fim">
-                                <input type="text" data-conv-question="🥰 Beijo!" data-no-answer="true ">
+                                <input type="text" data-conv-question="🥰 Beijo!" data-no-answer="true">
                             </div>
                         </div>
 
 
                         <div data-conv-fork="fim">
-                            <input type="text" data-conv-question="🥰 Beijo!" data-no-answer="true ">
+                            <input type="text" data-conv-question="🥰 Beijo!" data-no-answer="true">
                         </div>
 
                     </form>
@@ -229,12 +230,12 @@
     </div>
     <!-- partial -->
     <script src='assets/js/jquery.min.js'></script>
-    <script src="assets/js/script.js "></script>
+    <script src="assets/js/script.js"></script>
 
     <!-- Bot-->
-    <script type="text/javascript " src="assets/js/jquery-1.12.3.min.js "></script>
-    <script type="text/javascript " src="assets/js/autosize.min.js "></script>
-    <script type="text/javascript " src="assets/js/jquery.convform.js "></script>
+    <script type="text/javascript" src="assets/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="assets/js/autosize.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.convform.js"></script>
     <script>
         function googlemaps(stateWrapper, ready) {
             window.open("https://www.google.com/maps/place/Col%C3%A9gio+Objetivo+Juazeiro/@-7.2026142,-39.3132049,17z/data=!3m1!4b1!4m5!3m4!1s0x7a17f4d7d22bc4f:0xe696fd8e2903120c!8m2!3d-7.2026142!4d-39.3110162");
@@ -294,13 +295,13 @@
 
         function storeState(stateWrapper, ready) {
             rollbackTo = stateWrapper.current;
-            console.log("storeState called: ", rollbackTo);
+            console.log("storeState called:", rollbackTo);
             ready();
         }
 
         function rollback(stateWrapper, ready) {
-            console.log("rollback called: ", rollbackTo, originalState);
-            console.log("answers at the time of user input: ", stateWrapper.answers);
+            console.log("rollback called:", rollbackTo, originalState);
+            console.log("answers at the time of user input:", stateWrapper.answers);
             if (rollbackTo != false) {
                 if (originalState == false) {
                     originalState = stateWrapper.current.next;

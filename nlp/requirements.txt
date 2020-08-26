@@ -5,6 +5,9 @@ ChatterBot==1.0.5
 chatterbot-corpus==1.2.0
 click==7.1.2
 cymem==2.0.3
+fastapi==0.61.0
+h11==0.9.0
+httptools==0.1.1
 idna==2.10
 joblib==0.16.0
 mathparse==0.1.2
@@ -15,6 +18,7 @@ packaging==20.4
 Pint==0.15
 plac==0.9.6
 preshed==2.0.1
+pydantic==1.6.1
 pymongo==3.11.0
 pyparsing==2.4.7
 python-dateutil==2.7.5
@@ -26,7 +30,11 @@ six==1.15.0
 spacy==2.1.9
 SQLAlchemy==1.2.19
 srsly==1.0.2
+starlette==0.13.6
 thinc==7.0.8
 tqdm==4.48.2
 urllib3==1.25.10
+uvicorn==0.11.8
+uvloop==0.14.0
 wasabi==0.7.1
+websockets==8.1
